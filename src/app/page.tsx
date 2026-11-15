@@ -58,7 +58,7 @@ export default function HomePage() {
           className="liquid-glass rounded-[28px] px-[52px] py-[24px] flex items-center justify-between"
         >
           {/* Logo */}
-          <span className="font-[var(--font-anton)] text-lg uppercase tracking-[0.1em]">
+          <span className="font-[var(--font-anton)] text-lg uppercase tracking-[0.1em] drop-shadow-[0_0_10px_rgba(111,255,0,0.4)]">
             Orbis<span className="text-[#6FFF00]">.</span>Nft
           </span>
 
@@ -170,7 +170,8 @@ export default function HomePage() {
       <section id="home" className="relative min-h-screen rounded-b-[32px] overflow-hidden pt-32">
         {/* Background Video */}
         <video
-          src="/hero-bg.mp4"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a1440'/%3E%3Cstop offset='0.5' stop-color='%23050a2a'/%3E%3Cstop offset='1' stop-color='%23010828'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23g)'/%3E%3C/svg%3E"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_045634_e1c98c76-1265-4f5c-882a-4276f2080894.mp4"
           autoPlay
           loop
           muted
@@ -179,14 +180,21 @@ export default function HomePage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
+        {/* Dark gradient overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#010828] via-[#010828]/40 to-transparent pointer-events-none" />
+
         {/* Content */}
-        <div className="relative z-10 flex h-full flex-col items-start justify-center px-10 sm:px-20">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{ visible: { transition: { staggerChildren: 0.18, delayChildren: 0.2 } } }}
+          className="relative z-10 flex h-full flex-col items-start justify-center px-10 sm:px-20"
+        >
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[var(--font-anton)] uppercase text-[40px] leading-[1.1] tracking-[-0.02em] sm:text-[60px] md:text-[80px] lg:text-[90px] max-w-[1200px]"
+            className="font-[var(--font-anton)] uppercase text-[34px] leading-[1.1] tracking-[-0.02em] sm:text-[52px] md:text-[72px] lg:text-[84px] max-w-[1200px]"
           >
             Beyond earth and{" "}
             <span className="text-[#6FFF00]">(</span>
@@ -197,10 +205,9 @@ export default function HomePage() {
 
           {/* Cursive Overlay */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute -top-20 right-10 sm:-top-28 sm:right-20 rotate-[-8deg] font-[var(--font-condiment)] text-[#6FFF00] text-[48px] sm:text-[72px] mix-blend-exclusion select-none pointer-events-none"
+            variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute -top-20 right-10 sm:-top-28 sm:right-20 rotate-[-8deg] font-[var(--font-condiment)] text-[#6FFF00] text-[40px] sm:text-[60px] lg:text-[72px] mix-blend-exclusion select-none pointer-events-none"
             style={{ fontFamily: "var(--font-condiment)" }}
           >
             Nft collection
@@ -273,14 +280,14 @@ export default function HomePage() {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Section 2: About */}
       <section id="about" className="relative min-h-screen overflow-hidden">
         {/* Background Video */}
         <video
-          src="/about-bg.mp4"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4"
           autoPlay
           loop
           muted
@@ -749,13 +756,13 @@ export default function HomePage() {
       <section id="cta" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden rounded-t-[32px]">
         {/* Background Video */}
         <video
-          src="/cta-bg.mp4"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055729_72d66327-b59e-4ae9-bb70-de6ccb5ecdb0.mp4"
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-auto block"
+          className="absolute inset-0 w-full h-full object-cover"
         />
 
         {/* Overlay */}
