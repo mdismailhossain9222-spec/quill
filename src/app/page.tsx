@@ -284,8 +284,8 @@ export default function HomePage() {
       </section>
 
       {/* Section 2: About */}
-      <section id="about" className="relative min-h-screen overflow-hidden w-full bg-[#EFF4FF]">
-        {/* Background Video - full opacity with subtle cream overlay for text readability */}
+      <section id="about" className="relative min-h-screen overflow-hidden w-full">
+        {/* Background Video - full opacity, cinematic */}
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4"
           autoPlay
@@ -293,10 +293,10 @@ export default function HomePage() {
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Cream overlay to ensure text readability over video */}
-        <div className="absolute inset-0 bg-[#EFF4FF]/90 pointer-events-none" />
+        {/* Dark gradient overlay for text readability over video */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/60 to-transparent pointer-events-none" />
 
         <div className="relative z-10 h-full w-full px-10 sm:px-20 flex items-center justify-center">
           <div className="w-full max-w-[1831px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -306,10 +306,10 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="font-[var(--font-anton)] uppercase text-[24px] sm:text-[32px] tracking-[0.1em] mb-4 text-[#010828]">
+              <p className="font-[var(--font-anton)] uppercase text-[24px] sm:text-[32px] tracking-[0.1em] mb-4 text-white">
                 Hello! I&apos;m
               </p>
-              <h2 className="font-[var(--font-anton)] uppercase text-[48px] sm:text-[64px] md:text-[80px] leading-[1.05] tracking-[-0.02em] relative text-[#010828]">
+              <h2 className="font-[var(--font-anton)] uppercase text-[48px] sm:text-[64px] md:text-[80px] leading-[1.05] tracking-[-0.02em] relative text-white">
                 orbis
                 <span
                   className="absolute -top-8 left-0 font-[var(--font-condiment)] text-[#6FFF00] text-[36px] sm:text-[48px] md:text-[64px] mix-blend-exclusion select-none pointer-events-none"
@@ -325,7 +325,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="font-mono uppercase text-sm sm:text-base leading-relaxed tracking-[0.15em] text-[#010828]/70 max-w-[500px]"
+              className="font-mono uppercase text-sm sm:text-base leading-relaxed tracking-[0.15em] text-white/80 max-w-[500px]"
             >
               A digital object fixed beyond time and place. An exploration of
               distance, form, and silence in space
@@ -334,13 +334,13 @@ export default function HomePage() {
 
           {/* Decorative opacity-10 text blocks at bottom */}
           <div className="absolute bottom-10 left-10 right-10 grid grid-cols-3 gap-8 text-center">
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-white/10">
               ORBIT
             </div>
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-white/10">
               FORM
             </div>
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-white/10">
               SILENCE
             </div>
           </div>
