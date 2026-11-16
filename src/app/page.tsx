@@ -285,7 +285,7 @@ export default function HomePage() {
 
       {/* Section 2: About */}
       <section id="about" className="relative min-h-screen overflow-hidden w-full bg-[#EFF4FF]">
-        {/* Background Video */}
+        {/* Background Video - full opacity with subtle cream overlay for text readability */}
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4"
           autoPlay
@@ -293,8 +293,10 @@ export default function HomePage() {
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover opacity-10"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
+        {/* Cream overlay to ensure text readability over video */}
+        <div className="absolute inset-0 bg-[#EFF4FF]/90 pointer-events-none" />
 
         <div className="relative z-10 h-full w-full px-10 sm:px-20 flex items-center justify-center">
           <div className="w-full max-w-[1831px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
