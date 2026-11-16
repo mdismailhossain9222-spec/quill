@@ -14,14 +14,14 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="liquid-glass rounded-[24px] overflow-hidden"
+      className="liquid-glass-light rounded-[24px] overflow-hidden"
     >
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
       >
-        <span className="font-[var(--font-anton)] text-lg sm:text-xl uppercase tracking-[0.05em] pr-10">
+        <span className="font-[var(--font-anton)] text-lg sm:text-xl uppercase tracking-[0.05em] pr-10 text-[#010828]">
           {question}
         </span>
         <motion.div
@@ -38,8 +38,8 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
         className="overflow-hidden"
       >
-        <div className="px-6 pb-6 border-t border-white/10">
-          <p className="font-[var(--font-mono)] text-sm sm:text-base leading-relaxed text-[#EFF4FF]/70">
+        <div className="px-6 pb-6 border-t border-black/10">
+          <p className="font-[var(--font-mono)] text-sm sm:text-base leading-relaxed text-[#010828]/70">
             {answer}
           </p>
         </div>
@@ -284,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 2: About */}
-      <section id="about" className="relative min-h-screen overflow-hidden w-full">
+      <section id="about" className="relative min-h-screen overflow-hidden w-full bg-[#EFF4FF]">
         {/* Background Video */}
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4"
@@ -293,7 +293,7 @@ export default function HomePage() {
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-10"
         />
 
         <div className="relative z-10 h-full w-full px-10 sm:px-20 flex items-center justify-center">
@@ -304,10 +304,10 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="font-[var(--font-anton)] uppercase text-[24px] sm:text-[32px] tracking-[0.1em] mb-4">
+              <p className="font-[var(--font-anton)] uppercase text-[24px] sm:text-[32px] tracking-[0.1em] mb-4 text-[#010828]">
                 Hello! I&apos;m
               </p>
-              <h2 className="font-[var(--font-anton)] uppercase text-[48px] sm:text-[64px] md:text-[80px] leading-[1.05] tracking-[-0.02em] relative">
+              <h2 className="font-[var(--font-anton)] uppercase text-[48px] sm:text-[64px] md:text-[80px] leading-[1.05] tracking-[-0.02em] relative text-[#010828]">
                 orbis
                 <span
                   className="absolute -top-8 left-0 font-[var(--font-condiment)] text-[#6FFF00] text-[36px] sm:text-[48px] md:text-[64px] mix-blend-exclusion select-none pointer-events-none"
@@ -323,7 +323,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="font-mono uppercase text-sm sm:text-base leading-relaxed tracking-[0.15em] text-[#EFF4FF]/80 max-w-[500px]"
+              className="font-mono uppercase text-sm sm:text-base leading-relaxed tracking-[0.15em] text-[#010828]/70 max-w-[500px]"
             >
               A digital object fixed beyond time and place. An exploration of
               distance, form, and silence in space
@@ -332,13 +332,13 @@ export default function HomePage() {
 
           {/* Decorative opacity-10 text blocks at bottom */}
           <div className="absolute bottom-10 left-10 right-10 grid grid-cols-3 gap-8 text-center">
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#EFF4FF]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
               ORBIT
             </div>
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#EFF4FF]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
               FORM
             </div>
-            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#EFF4FF]/10">
+            <div className="font-mono uppercase text-xs tracking-[0.3em] text-[#010828]/10">
               SILENCE
             </div>
           </div>
@@ -346,14 +346,14 @@ export default function HomePage() {
       </section>
 
       {/* Section 3: WHY ORBIS? (Features) */}
-      <section id="features" className="bg-bg-space py-24 sm:py-32 w-full">
+      <section id="features" className="bg-[#EFF4FF] py-24 sm:py-32 w-full">
         <div className="w-full px-10 sm:px-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] mb-16"
+            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] mb-16 text-[#010828]"
           >
             WHY <span className="text-[#6FFF00]">OR</span>BIS?
           </motion.h2>
@@ -365,15 +365,15 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="liquid-glass rounded-[28px] p-8 flex flex-col items-start gap-4"
+              className="liquid-glass-light rounded-[28px] p-8 flex flex-col items-start gap-4"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6FFF00]/10 text-[#6FFF00]">
                 <Gem className="h-6 w-6" />
               </div>
-              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em]">
+              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em] text-[#010828]">
                 Rarity
               </h3>
-              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                 Each object is mathematically unique.
               </p>
             </motion.div>
@@ -384,15 +384,15 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="liquid-glass rounded-[28px] p-8 flex flex-col items-start gap-4"
+              className="liquid-glass-light rounded-[28px] p-8 flex flex-col items-start gap-4"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6FFF00]/10 text-[#6FFF00]">
                 <Shield className="h-6 w-6" />
               </div>
-              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em]">
+              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em] text-[#010828]">
                 Security
               </h3>
-              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                 Stored on the Ethereum blockchain.
               </p>
             </motion.div>
@@ -403,15 +403,15 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="liquid-glass rounded-[28px] p-8 flex flex-col items-start gap-4"
+              className="liquid-glass-light rounded-[28px] p-8 flex flex-col items-start gap-4"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6FFF00]/10 text-[#6FFF00]">
                 <Users className="h-6 w-6" />
               </div>
-              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em]">
+              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em] text-[#010828]">
                 Community
               </h3>
-              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                 Join a network of space explorers.
               </p>
             </motion.div>
@@ -422,15 +422,15 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-              className="liquid-glass rounded-[28px] p-8 flex flex-col items-start gap-4"
+              className="liquid-glass-light rounded-[28px] p-8 flex flex-col items-start gap-4"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6FFF00]/10 text-[#6FFF00]">
                 <Zap className="h-6 w-6" />
               </div>
-              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em]">
+              <h3 className="font-[var(--font-anton)] uppercase text-xl tracking-[0.1em] text-[#010828]">
                 Utility
               </h3>
-              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+              <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                 Access exclusive metaverse events.
               </p>
             </motion.div>
@@ -439,12 +439,12 @@ export default function HomePage() {
       </section>
 
       {/* Section 4: NFT Collection Grid */}
-      <section id="gallery" className="bg-bg-space py-24 sm:py-32 w-full">
+      <section id="gallery" className="bg-[#EFF4FF] py-24 sm:py-32 w-full">
         <div className="w-full px-10 sm:px-20">
           {/* Header */}
           <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="font-[var(--font-anton)] uppercase text-[32px] sm:text-[40px] md:text-[48px] leading-[1.05] tracking-[-0.02em] mb-2" style={{ textIndent: '2em' }}>
+              <p className="font-[var(--font-anton)] uppercase text-[32px] sm:text-[40px] md:text-[48px] leading-[1.05] tracking-[-0.02em] mb-2 text-[#010828]" style={{ textIndent: '2em' }}>
                 Collection of{" "}
                 <span className="font-[var(--font-condiment)] text-[#6FFF00]">
                   Space
@@ -454,7 +454,7 @@ export default function HomePage() {
             </div>
             <Link
               href="#all-creators"
-              className="group inline-flex items-center gap-3 font-[var(--font-anton)] text-[18px] uppercase tracking-[0.15em] hover:text-[#6FFF00] transition-colors"
+              className="group inline-flex items-center gap-3 font-[var(--font-anton)] text-[18px] uppercase tracking-[0.15em] hover:text-[#6FFF00] transition-colors text-[#010828]"
             >
               SEE ALL CREATORS
               <div className="h-px w-24 bg-[#6FFF00] transition-all duration-300 group-hover:w-32" />
@@ -469,7 +469,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="liquid-glass rounded-[32px] p-[18px]"
+              className="liquid-glass-light rounded-[32px] p-[18px]"
             >
               {/* Video Container */}
               <div className="relative mb-4 pb-[100%] rounded-[24px] overflow-hidden">
@@ -483,12 +483,12 @@ export default function HomePage() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Overlay Bar */}
-                <div className="absolute bottom-0 left-0 right-0 liquid-glass rounded-[20px] px-5 py-4 flex items-center justify-between">
+                <div className="absolute bottom-0 left-0 right-0 liquid-glass-light rounded-[20px] px-5 py-4 flex items-center justify-between">
                   <div className="flex flex-col">
-                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#EFF4FF]/60">
+                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#010828]/60">
                       Rarity Score:
                     </span>
-                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#EFF4FF]">
+                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#010828]">
                       8.7
                     </span>
                   </div>
@@ -509,7 +509,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="liquid-glass rounded-[32px] p-[18px]"
+              className="liquid-glass-light rounded-[32px] p-[18px]"
             >
               {/* Video Container */}
               <div className="relative mb-4 pb-[100%] rounded-[24px] overflow-hidden">
@@ -523,12 +523,12 @@ export default function HomePage() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Overlay Bar */}
-                <div className="absolute bottom-0 left-0 right-0 liquid-glass rounded-[20px] px-5 py-4 flex items-center justify-between">
+                <div className="absolute bottom-0 left-0 right-0 liquid-glass-light rounded-[20px] px-5 py-4 flex items-center justify-between">
                   <div className="flex flex-col">
-                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#EFF4FF]/60">
+                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#010828]/60">
                       Rarity Score:
                     </span>
-                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#EFF4FF]">
+                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#010828]">
                       9.0
                     </span>
                   </div>
@@ -549,7 +549,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="liquid-glass rounded-[32px] p-[18px]"
+              className="liquid-glass-light rounded-[32px] p-[18px]"
             >
               {/* Video Container */}
               <div className="relative mb-4 pb-[100%] rounded-[24px] overflow-hidden">
@@ -563,12 +563,12 @@ export default function HomePage() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 {/* Overlay Bar */}
-                <div className="absolute bottom-0 left-0 right-0 liquid-glass rounded-[20px] px-5 py-4 flex items-center justify-between">
+                <div className="absolute bottom-0 left-0 right-0 liquid-glass-light rounded-[20px] px-5 py-4 flex items-center justify-between">
                   <div className="flex flex-col">
-                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#EFF4FF]/60">
+                    <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.2em] text-[#010828]/60">
                       Rarity Score:
                     </span>
-                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#EFF4FF]">
+                    <span className="font-[var(--font-mono)] text-[20px] font-semibold text-[#010828]">
                       8.2
                     </span>
                   </div>
@@ -587,7 +587,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 5: Roadmap - THE JOURNEY */}
-      <section id="roadmap" className="bg-bg-space py-24 sm:py-32 relative w-full">
+      <section id="roadmap" className="bg-[#EFF4FF] py-24 sm:py-32 relative w-full">
         {/* Neon glow line background */}
         <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#6FFF00] to-transparent opacity-30" />
         <div className="pointer-events-none absolute left-1/2 top-1/4 h-[200px] w-[200px] -translate-x-1/2 rounded-full bg-[#6FFF00]/10 blur-[100px]" />
@@ -598,7 +598,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-center mb-20"
+            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-center mb-20 text-[#010828]"
           >
             THE <span className="text-[#6FFF00]">JOURNEY</span>
           </motion.h2>
@@ -614,7 +614,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
@@ -623,16 +623,16 @@ export default function HomePage() {
               </div>
 
               {/* Phase Content */}
-              <div className="flex-1 liquid-glass rounded-[28px] p-8">
+              <div className="flex-1 liquid-glass-light rounded-[28px] p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="font-[var(--font-anton)] text-[14px] uppercase tracking-[0.2em] text-[#6FFF00]">
                     PHASE 01
                   </span>
-                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em]">
+                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em] text-[#010828]">
                     Genesis Launch
                   </h3>
                 </div>
-                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                   The Orbis collection debuts. 5,000 unique 3D space artifacts minted on Ethereum.
                   Community foundation established. Initial rarity tiers revealed.
                 </p>
@@ -649,7 +649,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
@@ -658,16 +658,16 @@ export default function HomePage() {
               </div>
 
               {/* Phase Content */}
-              <div className="flex-1 liquid-glass rounded-[28px] p-8">
+              <div className="flex-1 liquid-glass-light rounded-[28px] p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="font-[var(--font-anton)] text-[14px] uppercase tracking-[0.2em] text-[#6FFF00]">
                     PHASE 02
                   </span>
-                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em]">
+                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em] text-[#010828]">
                     Metaverse Expansion
                   </h3>
                 </div>
-                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                   Orbis artifacts become playable avatars across partner metaverses.
                   Exclusive virtual galleries open. Staking mechanism launches for passive rewards.
                 </p>
@@ -684,7 +684,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
@@ -693,16 +693,16 @@ export default function HomePage() {
               </div>
 
               {/* Phase Content */}
-              <div className="flex-1 liquid-glass rounded-[28px] p-8">
+              <div className="flex-1 liquid-glass-light rounded-[28px] p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="font-[var(--font-anton)] text-[14px] uppercase tracking-[0.2em] text-[#6FFF00]">
                     PHASE 03
                   </span>
-                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em]">
+                  <h3 className="font-[var(--font-anton)] text-2xl sm:text-3xl tracking-[-0.01em] text-[#010828]">
                     Global Domination
                   </h3>
                 </div>
-                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#EFF4FF]/70">
+                <p className="font-[var(--font-mono)] text-sm leading-relaxed text-[#010828]/70">
                   Physical exhibitions in major cities. Cross-chain bridge to Solana & Polygon.
                   DAO governance activated. Orbis becomes the premier space artifact brand.
                 </p>
@@ -713,8 +713,8 @@ export default function HomePage() {
       </section>
 
       {/* Section 6: FAQ */}
-      <section id="faq" className="bg-bg-space py-24 sm:py-32 relative w-full">
-        <div className="pointer-events-none absolute right-0 top-1/2 h-[300px] w-[300px] rounded-full bg-[#6FFF00]/05 blur-[150px]" />
+      <section id="faq" className="bg-[#EFF4FF] py-24 sm:py-32 relative w-full">
+        <div className="pointer-events-none absolute right-0 top-1/2 h-[300px] w-[300px] rounded-full bg-[#6FFF00]/10 blur-[150px]" />
 
         <div className="relative z-10 w-full px-10 sm:px-20">
           <motion.h2
@@ -722,7 +722,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-center mb-16"
+            className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.02em] text-center mb-16 text-[#010828]"
           >
             FREQUENTLY <span className="text-[#6FFF00]">ASKED</span> QUESTIONS
           </motion.h2>
@@ -765,6 +765,9 @@ export default function HomePage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
+        {/* Dark gradient overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/40 to-transparent pointer-events-none" />
+
         {/* Overlay */}
         <div className="relative z-10 w-full px-10 sm:px-20 text-right">
           <motion.div
@@ -776,7 +779,7 @@ export default function HomePage() {
             <p className="font-[var(--font-condiment)] text-[#6FFF00] text-[24px] sm:text-[32px] mb-6">
               Go beyond
             </p>
-            <h2 className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-[-0.02em] mb-12">
+            <h2 className="font-[var(--font-anton)] uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-[-0.02em] mb-12 text-[#EFF4FF]">
               JOIN US.<br />
               REVEAL WHAT&apos;S HIDDEN.<br />
               DEFINE WHAT&apos;S NEXT.<br />
@@ -833,15 +836,15 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-bg-space py-10 w-full px-10 sm:px-20 border-t border-white/10">
+      <footer className="bg-[#EFF4FF] py-10 w-full px-10 sm:px-20 border-t border-black/10">
         <div className="w-full max-w-[1831px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#EFF4FF]/50">
+          <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#010828]/50">
             © 2026 Orbis.Nft. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a
               href="mailto:hello@orbis.nft"
-              className="liquid-glass flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
+              className="liquid-glass-light flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
               aria-label="Email"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -853,7 +856,7 @@ export default function HomePage() {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-glass flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
+              className="liquid-glass-light flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
               aria-label="Twitter"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -866,7 +869,7 @@ export default function HomePage() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-glass flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
+              className="liquid-glass-light flex h-10 w-10 items-center justify-center rounded-[12px] transition-transform hover:scale-110 hover:border-[#6FFF00]/50"
               aria-label="GitHub"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
