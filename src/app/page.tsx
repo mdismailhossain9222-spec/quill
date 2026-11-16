@@ -50,7 +50,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function HomePage() {
   return (
-    <main className="max-w-[1831px] mx-auto bg-[#010828] text-[#EFF4FF]">
+    <main className="max-w-[1831px] mx-auto bg-[#020202] text-[#EFF4FF]">
       {/* Navbar */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-[1831px] px-4">
         <Link
@@ -170,7 +170,7 @@ export default function HomePage() {
       <section id="home" className="relative min-h-screen rounded-b-[32px] overflow-hidden pt-32">
         {/* Background Video */}
         <video
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a1440'/%3E%3Cstop offset='0.5' stop-color='%23050a2a'/%3E%3Cstop offset='1' stop-color='%23010828'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23g)'/%3E%3C/svg%3E"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a1440'/%3E%3Cstop offset='0.5' stop-color='%23050a2a'/%3E%3Cstop offset='1' stop-color='%23020202'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23g)'/%3E%3C/svg%3E"
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_045634_e1c98c76-1265-4f5c-882a-4276f2080894.mp4"
           autoPlay
           loop
@@ -181,7 +181,7 @@ export default function HomePage() {
         />
 
         {/* Dark gradient overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#010828] via-[#010828]/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/40 to-transparent pointer-events-none" />
 
         {/* Content */}
         <motion.div
@@ -614,7 +614,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
@@ -649,7 +649,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
@@ -684,7 +684,7 @@ export default function HomePage() {
             >
               {/* Timeline Dot */}
               <div className="flex-shrink-0 flex flex-col items-center relative z-10">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#010828]">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#6FFF00] bg-[#020202]">
                   <div className="h-5 w-5 rounded-full bg-[#6FFF00] shadow-[0_0_20px_#6FFF00]" />
                 </div>
                 <div className="mt-4 font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#6FFF00]">
