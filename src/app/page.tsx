@@ -50,9 +50,9 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function HomePage() {
   return (
-    <main className="max-w-[1831px] mx-auto bg-[#020202] text-[#EFF4FF]">
+    <main className="w-full bg-[#020202] text-[#EFF4FF]">
       {/* Navbar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-[1831px] px-4">
+      <nav className="fixed top-6 left-0 right-0 z-40 px-4">
         <Link
           href="/"
           className="liquid-glass rounded-[28px] px-[52px] py-[24px] flex items-center justify-between"
@@ -167,7 +167,7 @@ export default function HomePage() {
       </nav>
 
       {/* Section 1: Hero */}
-      <section id="home" className="relative min-h-screen rounded-b-[32px] overflow-hidden pt-32">
+      <section id="home" className="relative min-h-screen rounded-b-[32px] overflow-hidden pt-32 w-full">
         {/* Background Video */}
         <video
           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a1440'/%3E%3Cstop offset='0.5' stop-color='%23050a2a'/%3E%3Cstop offset='1' stop-color='%23020202'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23g)'/%3E%3C/svg%3E"
@@ -188,7 +188,7 @@ export default function HomePage() {
           initial="hidden"
           animate="visible"
           variants={{ visible: { transition: { staggerChildren: 0.18, delayChildren: 0.2 } } }}
-          className="relative z-10 flex h-full flex-col items-start justify-center px-10 sm:px-20"
+          className="relative z-10 flex h-full flex-col items-start justify-center w-full px-10 sm:px-20"
         >
           {/* Main Heading */}
           <motion.h1
@@ -284,7 +284,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 2: About */}
-      <section id="about" className="relative min-h-screen overflow-hidden">
+      <section id="about" className="relative min-h-screen overflow-hidden w-full">
         {/* Background Video */}
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4"
@@ -296,7 +296,7 @@ export default function HomePage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="relative z-10 h-full px-10 sm:px-20 flex items-center">
+        <div className="relative z-10 h-full w-full px-10 sm:px-20 flex items-center justify-center">
           <div className="w-full max-w-[1831px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Column */}
             <motion.div
@@ -346,8 +346,8 @@ export default function HomePage() {
       </section>
 
       {/* Section 3: WHY ORBIS? (Features) */}
-      <section id="features" className="bg-bg-space py-24 sm:py-32">
-        <div className="px-10 sm:px-20">
+      <section id="features" className="bg-bg-space py-24 sm:py-32 w-full">
+        <div className="w-full px-10 sm:px-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -439,8 +439,8 @@ export default function HomePage() {
       </section>
 
       {/* Section 4: NFT Collection Grid */}
-      <section id="gallery" className="bg-bg-space py-24 sm:py-32">
-        <div className="px-10 sm:px-20">
+      <section id="gallery" className="bg-bg-space py-24 sm:py-32 w-full">
+        <div className="w-full px-10 sm:px-20">
           {/* Header */}
           <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -587,12 +587,12 @@ export default function HomePage() {
       </section>
 
       {/* Section 5: Roadmap - THE JOURNEY */}
-      <section id="roadmap" className="bg-bg-space py-24 sm:py-32 relative">
+      <section id="roadmap" className="bg-bg-space py-24 sm:py-32 relative w-full">
         {/* Neon glow line background */}
         <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[#6FFF00] to-transparent opacity-30" />
         <div className="pointer-events-none absolute left-1/2 top-1/4 h-[200px] w-[200px] -translate-x-1/2 rounded-full bg-[#6FFF00]/10 blur-[100px]" />
 
-        <div className="relative z-10 px-10 sm:px-20">
+        <div className="relative z-10 w-full px-10 sm:px-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -713,10 +713,10 @@ export default function HomePage() {
       </section>
 
       {/* Section 6: FAQ */}
-      <section id="faq" className="bg-bg-space py-24 sm:py-32 relative">
+      <section id="faq" className="bg-bg-space py-24 sm:py-32 relative w-full">
         <div className="pointer-events-none absolute right-0 top-1/2 h-[300px] w-[300px] rounded-full bg-[#6FFF00]/05 blur-[150px]" />
 
-        <div className="relative z-10 px-10 sm:px-20">
+        <div className="relative z-10 w-full px-10 sm:px-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -753,7 +753,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 7: CTA */}
-      <section id="cta" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden rounded-t-[32px]">
+      <section id="cta" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden rounded-t-[32px] w-full">
         {/* Background Video */}
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055729_72d66327-b59e-4ae9-bb70-de6ccb5ecdb0.mp4"
@@ -766,7 +766,7 @@ export default function HomePage() {
         />
 
         {/* Overlay */}
-        <div className="relative z-10 px-10 sm:px-20 text-right">
+        <div className="relative z-10 w-full px-10 sm:px-20 text-right">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -833,8 +833,8 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-bg-space py-10 px-10 sm:px-20 border-t border-white/10">
-        <div className="max-w-[1831px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <footer className="bg-bg-space py-10 w-full px-10 sm:px-20 border-t border-white/10">
+        <div className="w-full max-w-[1831px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="font-[var(--font-mono)] text-xs uppercase tracking-[0.2em] text-[#EFF4FF]/50">
             © 2026 Orbis.Nft. All rights reserved.
           </p>
